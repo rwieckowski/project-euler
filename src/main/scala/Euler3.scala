@@ -1,8 +1,8 @@
 /**
- * The prime factors of 13195 are 5, 7, 13 and 29.
- *
- * What is the largest prime factor of the number 600851475143 ?
- */
+The prime factors of 13195 are 5 7 13 and 29
+
+What is the largest prime factor of the number 600851475143 
+*/
 object Euler3 extends App {
   def nums(n: Long): Stream[Long] = n #:: nums(n + 1)
 
