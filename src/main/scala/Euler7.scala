@@ -6,4 +6,9 @@ What is the 10 001st prime number
 */
 object Euler7 extends App {
   println("Euler 7")
+  lazy val primes: Stream[Int] = 2 #:: Stream.from(3).filter(n => primes.takeWhile(p => p * p <= n).forall(n % _ != 0))
+  def nthPrime(n: Int) = primes.drop(n - 1).head
+
+  println(nthPrime(6))
+  println(nthPrime(10001))
 }
